@@ -21,5 +21,15 @@ public class Iteration {
             }
         });
         System.out.println("//" + "END:INTERNAL_FOR_EACH_OUTPUT");
+
+        System.out.println("//" + "START:INTERNAL_OUTPUT");
+        friends.forEach((final String name) -> System.out.println(name));
+        System.out.println("//" + "END:INTERNAL_FOR_EACH_OUTPUT");
+
+        friends.forEach((name) -> System.out.println(name));
+
+        friends.forEach(name -> System.out.println(name));
+
+        friends.forEach(System.out::println);
     }
 }
